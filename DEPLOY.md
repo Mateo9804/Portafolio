@@ -44,7 +44,18 @@ Por tu URL de Vercel:
 [![Portafolio en Vivo](https://img.shields.io/badge/🌐-Ver%20Portafolio-blue?style=for-the-badge)](https://tu-proyecto.vercel.app)
 ```
 
-## Opción Alternativa: Netlify
+## Opción 2: GitHub Pages (Automático)
+
+1. Ve a tu repositorio en GitHub: `https://github.com/Mateo9804/Portafolio`
+2. Ve a **Settings** > **Pages**
+3. En **Source**, selecciona **"GitHub Actions"**
+4. El workflow ya está configurado (`.github/workflows/deploy.yml`)
+5. Cada vez que hagas push a `main`, se desplegará automáticamente
+6. Tu portafolio estará disponible en: `https://mateo9804.github.io/Portafolio/`
+
+**Nota**: El workflow se ejecutará automáticamente después de configurar GitHub Pages.
+
+## Opción 3: Netlify
 
 1. Ve a [netlify.com](https://netlify.com)
 2. Inicia sesión con GitHub

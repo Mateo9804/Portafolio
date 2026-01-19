@@ -2,7 +2,7 @@
 
 > **Portafolio web interactivo con tema Visual Studio Code**
 
-[![Portafolio en Vivo](https://img.shields.io/badge/🌐-Ver%20Portafolio-blue?style=for-the-badge)](https://mateo9804.github.io) 
+[![Portafolio en Vivo](https://img.shields.io/badge/🌐-Ver%20Portafolio-blue?style=for-the-badge)](https://mateo9804.github.io/Portafolio/) 
 [![GitHub](https://img.shields.io/badge/GitHub-Repositorio-black?style=for-the-badge&logo=github)](https://github.com/Mateo9804/Portafolio)
 
 Portafolio web personal desarrollado con React (frontend) y Laravel (backend), diseñado con un tema inspirado en Visual Studio Code.
