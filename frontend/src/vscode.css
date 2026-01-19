@@ -63,21 +63,31 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
   margin: 0;
   padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+body {
   font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
   background: var(--vscode-bg);
   color: var(--vscode-text);
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .vscode-container {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  max-width: 100vw;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   background: var(--vscode-bg);
+  overflow-x: hidden;
+  position: relative;
 }
 
 /* Titlebar */
@@ -458,11 +468,15 @@ body {
 /* Editor Content */
 .editor-content {
   flex: 1;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
   padding: 20px;
   font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
   font-size: 14px;
   line-height: 1.6;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .code-content {
@@ -473,6 +487,10 @@ body {
   display: flex;
   min-height: 22px;
   padding: 0 8px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .line-number {
@@ -480,6 +498,7 @@ body {
   margin-right: 16px;
   text-align: right;
   min-width: 40px;
+  flex-shrink: 0;
   user-select: none;
   font-size: 13px;
 }
@@ -489,6 +508,10 @@ body {
   color: var(--vscode-text);
   white-space: pre-wrap;
   word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  min-width: 0;
+  max-width: 100%;
 }
 
 /* Syntax Highlighting */
@@ -686,7 +709,11 @@ body {
   border: 1px solid var(--vscode-border);
   border-radius: 8px;
   padding: 15px;
-  overflow-x: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .code-boolean {
@@ -1123,9 +1150,10 @@ body {
   font-size: 13px;
   outline: none;
   transition: all 0.2s ease;
-  width: 100%;
+  width: calc(100% - 56px);
   max-width: 600px;
   margin-left: 56px;
+  box-sizing: border-box;
 }
 
 .code-input-block:focus,
@@ -1371,6 +1399,18 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+  }
+
+  .vscode-container {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
   .mobile-menu-button {
     display: flex;
     margin-right: 10px;
@@ -1384,13 +1424,21 @@ body {
     z-index: 999;
     transition: left 0.3s ease;
     box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+    width: 250px;
+    max-width: 80vw;
   }
 
   .vscode-sidebar.open {
     left: 0;
+    pointer-events: auto;
   }
 
   .sidebar-overlay {
+    display: none;
+  }
+
+  .sidebar-overlay.open {
     display: block;
   }
 
@@ -1406,24 +1454,52 @@ body {
 
   .vscode-editor-area {
     width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .vscode-main {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
   }
 
   .titlebar-center {
-    max-width: 200px;
+    max-width: 150px;
+    flex: 0 0 auto;
   }
   
   .vscode-search {
-    width: 150px;
-    font-size: 12px;
+    width: 120px;
+    max-width: 100%;
+    font-size: 11px;
+    padding: 4px 6px;
   }
 
   .titlebar-title {
-    font-size: 12px;
+    font-size: 11px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 120px;
+  }
+
+  .titlebar-left {
+    min-width: 0;
+    flex: 0 0 auto;
+  }
+
+  .titlebar-right {
+    flex: 0 0 auto;
   }
 
   .editor-content {
-    padding: 15px;
-    font-size: 13px;
+    padding: 10px;
+    font-size: 12px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
   }
 
   .editor-tabs {
@@ -1443,10 +1519,21 @@ body {
     white-space: nowrap;
   }
 
+  .inicio-container {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
   .inicio-hero-section {
     flex-direction: column;
     align-items: center;
     padding: 15px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   .profile-image-circle {
@@ -1457,11 +1544,17 @@ body {
 
   .code-card {
     width: 100%;
+    max-width: 100%;
     margin-left: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
   }
 
   .inicio-about-section {
     padding: 15px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   .about-title {
@@ -1545,28 +1638,113 @@ body {
   .code-line {
     font-size: 12px;
     min-height: 20px;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 4px;
+    box-sizing: border-box;
+    overflow-x: hidden;
   }
 
   .line-number {
-    min-width: 30px;
-    font-size: 11px;
+    min-width: 20px;
+    width: 20px;
+    font-size: 10px;
+    margin-right: 6px;
+    flex-shrink: 0;
+  }
+
+  .code-text {
+    font-size: 12px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    min-width: 0;
+    max-width: calc(100% - 30px);
+  }
+
+  .code-header,
+  .code-footer {
+    padding-left: 4px;
+    font-size: 14px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .sobre-mi-container,
+  .proyectos-container,
+  .habilidades-container,
+  .contacto-container {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+  .info-card,
+  .project-card,
+  .skill-card,
+  .habilidad-card {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    padding: 12px;
+  }
+
+  .code-input-block,
+  .code-textarea-block {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    box-sizing: border-box;
+  }
+
+  .form-field-block {
+    padding-left: 0;
+  }
+
+  .form-button-block {
+    margin-left: 0;
+  }
+
+  .status-message-inline {
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .contact-form-inline {
+    padding-left: 0;
   }
 }
 
 @media (max-width: 480px) {
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+  }
+
+  .vscode-container {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
   .titlebar-center {
     display: none;
   }
 
   .titlebar-left {
     flex: 1;
+    min-width: 0;
   }
 
   .titlebar-title {
-    font-size: 11px;
+    font-size: 10px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    max-width: 100px;
   }
 
   .vscode-sidebar {
@@ -1574,9 +1752,19 @@ body {
     max-width: 280px;
   }
 
+  .vscode-editor-area {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
   .editor-content {
-    padding: 10px;
-    font-size: 12px;
+    padding: 8px;
+    font-size: 11px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
   }
 
   .inicio-container {
@@ -1689,13 +1877,65 @@ body {
 
   .code-line {
     font-size: 11px;
-    padding: 0 4px;
+    padding: 0 2px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
   }
 
   .line-number {
-    min-width: 25px;
-    font-size: 10px;
-    margin-right: 8px;
+    min-width: 18px;
+    width: 18px;
+    font-size: 9px;
+    margin-right: 4px;
+    flex-shrink: 0;
+  }
+
+  .code-text {
+    font-size: 11px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    min-width: 0;
+    max-width: calc(100% - 25px);
+  }
+
+  .code-header,
+  .code-footer {
+    padding-left: 2px;
+    font-size: 12px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .code-input-block,
+  .code-textarea-block {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    box-sizing: border-box;
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .form-field-block {
+    padding-left: 0;
+  }
+
+  .form-button-block {
+    margin-left: 0;
+  }
+
+  .status-message-inline {
+    margin-left: 0;
+    max-width: 100%;
+    font-size: 11px;
+    padding: 8px;
+  }
+
+  .contact-form-inline {
+    padding-left: 0;
+    margin: 15px 0;
   }
 
   .vscode-statusbar {
