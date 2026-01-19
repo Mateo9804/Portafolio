@@ -71,7 +71,7 @@ const Proyectos = () => {
               rel="noopener noreferrer"
               className="project-link codigo-link"
             >
-              <img src="/imagenes/github.webp" alt="GitHub" className="project-link-icon" />
+              <img src={`${import.meta.env.BASE_URL || '/'}imagenes/github.webp`} alt="GitHub" className="project-link-icon" />
               <span>{t.code}</span>
             </a>
             {project.demo && (

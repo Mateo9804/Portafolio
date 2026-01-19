@@ -55,7 +55,7 @@ const Inicio = () => {
       <div className="inicio-hero-section">
         <div className="profile-image-container">
           <img 
-            src="/imagenes/fotoperfil.jpeg" 
+            src={`${import.meta.env.BASE_URL || '/'}imagenes/fotoperfil.jpeg`}
             alt={portfolioData.name}
             className="profile-image-circle"
             onError={(e) => {
@@ -124,7 +124,7 @@ const Inicio = () => {
             rel="noopener noreferrer"
             className="social-button github-button"
           >
-            <img src="/imagenes/github.webp" alt="GitHub" className="social-icon" />
+            <img src={`${import.meta.env.BASE_URL || '/'}imagenes/github.webp`} alt="GitHub" className="social-icon" />
             <span>GitHub</span>
           </a>
           <a 
@@ -133,7 +133,7 @@ const Inicio = () => {
             rel="noopener noreferrer"
             className="social-button linkedin-button"
           >
-            <img src="/imagenes/linkedin.webp" alt="LinkedIn" className="social-icon" />
+            <img src={`${import.meta.env.BASE_URL || '/'}imagenes/linkedin.webp`} alt="LinkedIn" className="social-icon" />
             <span>LinkedIn</span>
           </a>
         </div>

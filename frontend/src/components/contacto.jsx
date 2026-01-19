@@ -152,7 +152,7 @@ const Contacto = () => {
             rel="noopener noreferrer"
             className="contact-direct-link"
           >
-            <img src="/imagenes/linkedin.webp" alt="LinkedIn" className="contact-direct-icon" />
+            <img src={`${import.meta.env.BASE_URL || '/'}imagenes/linkedin.webp`} alt="LinkedIn" className="contact-direct-icon" />
             <span>linkedin.com/in/mateo-alejandro-vera-0a656b374/</span>
           </a>
         </div>

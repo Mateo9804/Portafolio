@@ -119,7 +119,7 @@ const SobreMi = () => {
       <div className="cv-section">
         <p className="cv-text">{t.cvText}</p>
         <a 
-          href="/cv/CV Mateo Alejandro Vera.pdf" 
+          href={`${import.meta.env.BASE_URL || '/'}cv/CV Mateo Alejandro Vera.pdf`}
           download
           className="cv-button"
         >

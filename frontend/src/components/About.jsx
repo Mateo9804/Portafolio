@@ -64,7 +64,7 @@ const About = () => {
         <div className="row align-items-center">
           <div className="col-md-4 text-center mb-4 mb-md-0 fade-in-on-scroll">
             <img 
-              src="/imagenes/fotoperfil.jpeg" 
+              src={`${import.meta.env.BASE_URL}imagenes/fotoperfil.jpeg`}
               alt="Mateo Alejandro Vera" 
               className="profile-image"
             />
