@@ -14,6 +14,7 @@ const VSCode = () => {
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedSearchIndex, setSelectedSearchIndex] = useState(0)
   const [showSettings, setShowSettings] = useState(false)
+  const [sidebarOpen, setSidebarOpen] = useState(false)
   const searchContainerRef = useRef(null)
   const settingsRef = useRef(null)
   const { theme, setTheme, language, setLanguage } = useConfig()
@@ -151,6 +152,13 @@ const VSCode = () => {
       {/* Barra superior */}
       <div className="vscode-titlebar">
         <div className="titlebar-left">
+          <button
+            className="titlebar-button mobile-menu-button"
+            onClick={() => setSidebarOpen(!sidebarOpen)}
+            title="Menú"
+          >
+            <span className="material-icons">menu</span>
+          </button>
           <span className="titlebar-title">&lt;&gt; {language === 'es' ? 'Portafolio' : 'Portfolio'}</span>
         </div>
         <div className="titlebar-center">
@@ -263,16 +271,26 @@ const VSCode = () => {
 
       <div className="vscode-main">
         {/* Sidebar */}
-        <div className="vscode-sidebar">
+        <div className={`vscode-sidebar ${sidebarOpen ? 'open' : ''}`}>
           <div className="sidebar-header">
             <span className="sidebar-title">{t.explorer}</span>
+            <button
+              className="sidebar-close-button"
+              onClick={() => setSidebarOpen(false)}
+              title="Cerrar"
+            >
+              <span className="material-icons">close</span>
+            </button>
           </div>
           <div className="file-explorer">
             {files.map((file) => (
               <div
                 key={file.name}
                 className={`file-item ${activeFile === file.name ? 'active' : ''}`}
-                onClick={() => handleFileClick(file.name)}
+                onClick={() => {
+                  handleFileClick(file.name)
+                  setSidebarOpen(false)
+                }}
               >
                 <div className="file-indicator"></div>
                 <span className="material-icons file-icon">{file.icon}</span>
@@ -281,6 +299,11 @@ const VSCode = () => {
             ))}
           </div>
         </div>
+        
+        {/* Overlay para móviles */}
+        {sidebarOpen && (
+          <div className="sidebar-overlay" onClick={() => setSidebarOpen(false)}></div>
+        )}
 
         {/* Editor Area */}
         <div className="vscode-editor-area">

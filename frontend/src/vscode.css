@@ -1338,38 +1338,245 @@ body {
   color: #ffffff;
 }
 
+/* Mobile Menu Button */
+.mobile-menu-button {
+  display: none;
+}
+
+.sidebar-close-button {
+  display: none;
+  background: transparent;
+  border: none;
+  color: var(--vscode-text-secondary);
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 3px;
+  margin-left: auto;
+}
+
+.sidebar-close-button:hover {
+  background: var(--vscode-hover);
+}
+
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
-  .vscode-sidebar {
-    width: 200px;
+  .mobile-menu-button {
+    display: flex;
+    margin-right: 10px;
   }
-  
+
+  .vscode-sidebar {
+    position: fixed;
+    left: -250px;
+    top: 35px;
+    bottom: 30px;
+    z-index: 999;
+    transition: left 0.3s ease;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .vscode-sidebar.open {
+    left: 0;
+  }
+
+  .sidebar-overlay {
+    display: block;
+  }
+
+  .sidebar-close-button {
+    display: flex;
+  }
+
+  .sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .vscode-editor-area {
+    width: 100%;
+  }
+
   .titlebar-center {
     max-width: 200px;
   }
   
   .vscode-search {
     width: 150px;
+    font-size: 12px;
+  }
+
+  .titlebar-title {
+    font-size: 12px;
+  }
+
+  .editor-content {
+    padding: 15px;
+    font-size: 13px;
+  }
+
+  .editor-tabs {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .editor-tab {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .tab-name {
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .inicio-hero-section {
     flex-direction: column;
     align-items: center;
+    padding: 15px;
   }
 
   .profile-image-circle {
     width: 120px;
     height: 120px;
+    margin-bottom: 15px;
+  }
+
+  .code-card {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .inicio-about-section {
+    padding: 15px;
+  }
+
+  .about-title {
+    font-size: 24px;
+  }
+
+  .about-description {
+    font-size: 14px;
+  }
+
+  .social-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .social-button {
+    width: 100%;
+  }
+
+  .info-card {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  .card-title {
+    font-size: 18px;
+  }
+
+  .project-card {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  .project-title {
+    font-size: 18px;
+  }
+
+  .project-description {
+    font-size: 13px;
+  }
+
+  .project-tech {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .tech-badge {
+    font-size: 11px;
+    padding: 4px 8px;
+  }
+
+  .skill-card {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  .skill-badge {
+    font-size: 11px;
+    padding: 4px 8px;
+  }
+
+  .contact-form-section {
+    padding: 15px;
+  }
+
+  .form-field {
+    margin-bottom: 15px;
+  }
+
+  .form-input,
+  .form-textarea {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .form-button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .code-line {
+    font-size: 12px;
+    min-height: 20px;
+  }
+
+  .line-number {
+    min-width: 30px;
+    font-size: 11px;
   }
 }
 
 @media (max-width: 480px) {
-  .vscode-sidebar {
-    width: 180px;
-  }
-  
   .titlebar-center {
     display: none;
+  }
+
+  .titlebar-left {
+    flex: 1;
+  }
+
+  .titlebar-title {
+    font-size: 11px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .vscode-sidebar {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .editor-content {
+    padding: 10px;
+    font-size: 12px;
   }
 
   .inicio-container {
@@ -1377,7 +1584,7 @@ body {
   }
 
   .inicio-hero-section {
-    padding: 15px;
+    padding: 10px;
   }
 
   .profile-image-circle {
@@ -1385,21 +1592,121 @@ body {
     height: 100px;
   }
 
-  .social-buttons {
-    flex-direction: column;
+  .code-card {
+    padding: 10px;
+  }
+
+  .about-title {
+    font-size: 20px;
+  }
+
+  .about-description {
+    font-size: 13px;
   }
 
   .social-button {
-    width: 100%;
-    justify-content: center;
+    padding: 10px;
+    font-size: 13px;
   }
 
   .info-card {
-    padding: 15px;
+    padding: 12px;
   }
 
   .card-title {
     font-size: 16px;
+  }
+
+  .card-content {
+    font-size: 13px;
+  }
+
+  .project-card {
+    padding: 12px;
+  }
+
+  .project-title {
+    font-size: 16px;
+  }
+
+  .project-description {
+    font-size: 12px;
+  }
+
+  .project-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .project-link {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .skill-card {
+    padding: 12px;
+  }
+
+  .skill-title {
+    font-size: 16px;
+  }
+
+  .contact-form-section {
+    padding: 12px;
+  }
+
+  .form-field {
+    margin-bottom: 12px;
+  }
+
+  .form-label {
+    font-size: 12px;
+  }
+
+  .form-input,
+  .form-textarea {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .form-button {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .contact-direct-section {
+    padding: 12px;
+  }
+
+  .contact-direct-title {
+    font-size: 14px;
+  }
+
+  .contact-direct-link {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .code-line {
+    font-size: 11px;
+    padding: 0 4px;
+  }
+
+  .line-number {
+    min-width: 25px;
+    font-size: 10px;
+    margin-right: 8px;
+  }
+
+  .vscode-statusbar {
+    height: 25px;
+    font-size: 11px;
+  }
+
+  .settings-dropdown {
+    right: 0;
+    left: auto;
+    min-width: 200px;
   }
 }
 
