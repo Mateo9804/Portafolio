@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import axios from 'axios'
 import { useConfig } from '../context/ConfigContext'
 import { translations } from '../translations'
 
@@ -30,24 +29,8 @@ const Inicio = () => {
     }))
   }, [language])
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get('http://localhost:8000/api/portfolio')
-        setPortfolioData(prev => ({
-          ...prev,
-          ...response.data,
-          title: language === 'es' ? (response.data.title || 'Desarrollador Full Stack') : (response.data.title || 'Full Stack Developer'),
-          summary: summaries[language],
-          github: response.data.github || prev.github,
-          linkedin: response.data.linkedin || prev.linkedin
-        }))
-      } catch (error) {
-        console.error('Error fetching portfolio data:', error)
-      }
-    }
-    fetchData()
-  }, [])
+  // Las llamadas a la API se han deshabilitado ya que no hay backend en producción
+  // Los datos por defecto se cargan instantáneamente
 
   return (
     <div className="inicio-container">

@@ -78,23 +78,32 @@ class PortfolioController extends Controller
             [
                 'id' => 1,
                 'title' => 'JobBridge',
-                'description' => 'Plataforma web desarrollada con JavaScript para conectar profesionales con oportunidades laborales.',
-                'technologies' => ['JavaScript', 'HTML', 'CSS', 'Bootstrap'],
+                'description' => 'Plataforma digital especializada en conectar a desarrolladores y programadores con empresas que buscan talento tecnológico.',
+                'technologies' => ['JavaScript', 'React.js', 'HTML', 'CSS', 'Bootstrap', 'Laravel', 'PHP', 'Docker', 'Railway', 'Vercel'],
                 'image' => '/images/jobbridge.jpg',
                 'github' => 'https://github.com/Mateo9804/JobBridge',
-                'demo' => null
+                'demo' => 'https://job-bridge-alpha.vercel.app'
             ],
             [
                 'id' => 2,
-                'title' => 'Sistema de Gestión',
-                'description' => 'Aplicación web completa desarrollada con React y Laravel para gestión empresarial.',
-                'technologies' => ['React', 'Laravel', 'MySQL', 'Bootstrap'],
-                'image' => '/images/project2.jpg',
-                'github' => 'https://github.com/Mateo9804',
-                'demo' => null
+                'title' => 'ZetaCuts',
+                'description' => 'Plataforma digital completa para la gestión de una barbería que permite agendar citas, vender productos y administrar usuarios.',
+                'technologies' => ['React.js', 'HTML', 'CSS', 'JavaScript', 'PHP', 'Docker', 'Laravel', 'Render'],
+                'image' => '/images/zetacuts.jpg',
+                'github' => 'https://github.com/Proyectos-completos/ZetaCuts',
+                'demo' => 'https://zetacuts-frontend-hdqr.onrender.com/'
             ],
             [
                 'id' => 3,
+                'title' => 'Angax',
+                'description' => 'Red social fitness para el seguimiento del entrenamiento. Desarrollé el frontend y parte del backend (progreso y entrenadores). Incluye rutinas compartidas y chatbot inteligente.',
+                'technologies' => ['React.js', 'HTML', 'CSS', 'JavaScript', 'PHP', 'Docker', 'Laravel', 'Render'],
+                'image' => '/images/angax.jpg',
+                'github' => 'https://github.com/Angelation/Angax',
+                'demo' => 'https://angax-frontend.onrender.com/'
+            ],
+            [
+                'id' => 4,
                 'title' => 'Portafolio Personal',
                 'description' => 'Portafolio web personal desarrollado con React y Laravel, mostrando proyectos y habilidades.',
                 'technologies' => ['React', 'Laravel', 'PHP', 'Bootstrap', 'CSS'],

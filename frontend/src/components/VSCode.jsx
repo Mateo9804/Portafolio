@@ -301,9 +301,7 @@ const VSCode = () => {
         </div>
         
         {/* Overlay para móviles */}
-        {sidebarOpen && (
-          <div className="sidebar-overlay" onClick={() => setSidebarOpen(false)}></div>
-        )}
+        <div className={`sidebar-overlay ${sidebarOpen ? 'open' : ''}`} onClick={() => setSidebarOpen(false)}></div>
 
         {/* Editor Area */}
         <div className="vscode-editor-area">

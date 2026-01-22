@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import axios from 'axios'
 import { useConfig } from '../context/ConfigContext'
 import { translations } from '../translations'
 
@@ -49,24 +48,8 @@ const SobreMi = () => {
     }))
   }, [language])
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get('http://localhost:8000/api/portfolio/about')
-        // Solo actualizar si la respuesta tiene datos válidos
-        if (response.data && (response.data.description || response.data.education?.length > 0)) {
-          setAboutData({
-            ...response.data,
-            description: descriptions[language]
-          })
-        }
-      } catch (error) {
-        console.error('Error fetching about data:', error)
-        // Mantener los datos por defecto si hay error
-      }
-    }
-    fetchData()
-  }, [language])
+  // Las llamadas a la API se han deshabilitado ya que no hay backend en producción
+  // Los datos por defecto se cargan instantáneamente
 
   return (
     <div className="sobre-mi-container">
