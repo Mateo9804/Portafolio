@@ -29,12 +29,12 @@ const SobreMi = () => {
       {
         position: 'Desarrollador de aplicaciones web',
         company: 'Freelance',
-        period: 'Julio 2025 - Presente'
+        period: '21/07/2025 – Actualmente'
       },
       {
         position: 'Desarrollador de aplicaciones web',
         company: 'NeoFranquicias SL',
-        period: 'Marzo 2025'
+        period: '17/11/2024 – 11/07/2025'
       }
     ]
   }

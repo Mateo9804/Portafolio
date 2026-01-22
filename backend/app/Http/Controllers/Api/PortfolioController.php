@@ -53,7 +53,7 @@ class PortfolioController extends Controller
                 [
                     'position' => 'Desarrollador de aplicaciones web',
                     'company' => 'Freelance',
-                    'period' => 'Julio 2025 - Presente',
+                    'period' => '21/07/2025 – Actualmente',
                     'location' => 'Monóvar, Alicante, España',
                     'description' => 'Páginas para clientes',
                     'skills' => ['Java', 'Laravel', 'HTML5']
@@ -62,7 +62,7 @@ class PortfolioController extends Controller
                     'position' => 'Desarrollador de aplicaciones web',
                     'company' => 'NeoFranquicias SL',
                     'employment_type' => 'Jornada completa',
-                    'period' => 'Marzo 2025',
+                    'period' => '17/11/2024 – 11/07/2025',
                     'skills' => ['Laravel', 'JavaScript']
                 ]
             ]
