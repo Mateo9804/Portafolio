@@ -10,6 +10,7 @@ const Habilidades = () => {
     frontend: [
       'React.js',
       'JavaScript',
+      'Vite',
       'CSS',
       'HTML5'
     ],

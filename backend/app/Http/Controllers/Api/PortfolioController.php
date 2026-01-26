@@ -104,6 +104,15 @@ class PortfolioController extends Controller
             ],
             [
                 'id' => 4,
+                'title' => 'LoLHub',
+                'description' => 'Red social de League of Legends para interactuar con la comunidad, explorar información detallada sobre campeones (habilidades, builds, lore) y crear tu equipo ideal. Desarrollé el backend completo y parte del frontend.',
+                'technologies' => ['React.js', 'TypeScript', 'Chakra UI', 'Vite', 'Laravel', 'PHP', 'Docker'],
+                'image' => '/images/lolhub.jpg',
+                'github' => 'https://github.com/Enrique002/LoLHub',
+                'demo' => null
+            ],
+            [
+                'id' => 5,
                 'title' => 'Portafolio Personal',
                 'description' => 'Portafolio web personal desarrollado con React y Laravel, mostrando proyectos y habilidades.',
                 'technologies' => ['React', 'Laravel', 'PHP', 'Bootstrap', 'CSS'],
@@ -123,6 +132,7 @@ class PortfolioController extends Controller
             'frontend' => [
                 ['name' => 'React', 'level' => 90],
                 ['name' => 'JavaScript', 'level' => 85],
+                ['name' => 'Vite', 'level' => 85],
                 ['name' => 'HTML5', 'level' => 95],
                 ['name' => 'CSS3', 'level' => 90],
                 ['name' => 'Bootstrap', 'level' => 85],

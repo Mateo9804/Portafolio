@@ -10,12 +10,14 @@ const Proyectos = () => {
     es: {
       jobbridge: 'Plataforma digital especializada en conectar a desarrolladores y programadores con empresas que buscan talento tecnológico. El proyecto nace con el objetivo de ofrecer un espacio profesional más preciso y eficiente que los portales de empleo generalistas, facilitando a las empresas el acceso a perfiles calificados y permitiendo a los desarrolladores mostrar sus habilidades de forma clara y diferenciada.',
       zetacuts: 'Plataforma digital completa para la gestión de una barbería que permite agendar citas, vender productos y administrar usuarios. Desarrollé el backend completo y parte del frontend, incluyendo funcionalidades avanzadas de gestión de citas, inventario de productos y sistema de usuarios.',
-      angax: 'Red social fitness para el seguimiento integral del entrenamiento. Permite crear y compartir rutinas, visualizar progresos y conectar con una comunidad activa. Desarrollé el frontend completo y parte del backend, destacando el sistema de seguimiento de progreso y el apartado de gestión para entrenadores. Incluye un chatbot inteligente de asistencia personalizada.'
+      angax: 'Red social fitness para el seguimiento integral del entrenamiento. Permite crear y compartir rutinas, visualizar progresos y conectar con una comunidad activa. Desarrollé el frontend completo y parte del backend, destacando el sistema de seguimiento de progreso y el apartado de gestión para entrenadores. Incluye un chatbot inteligente de asistencia personalizada.',
+      lolhub: 'Red social de League of Legends para interactuar con la comunidad, explorar información detallada sobre campeones (habilidades, builds, lore) y crear tu equipo ideal. Desarrollé el backend completo y parte del frontend, utilizando una arquitectura moderna y eficiente con Docker.'
     },
     en: {
       jobbridge: 'Digital platform specialized in connecting developers and programmers with companies looking for tech talent. The project was born with the goal of offering a more precise and efficient professional space than generalist job portals, facilitating companies access to qualified profiles and allowing developers to showcase their skills clearly and distinctively.',
       zetacuts: 'Complete digital platform for barber shop management that allows scheduling appointments, selling products and managing users. I developed the complete backend and part of the frontend, including advanced appointment management features, product inventory and user system.',
-      angax: 'Fitness social network for comprehensive training tracking. It allows creating and sharing routines, visualizing progress, and connecting with an active community. I developed the complete frontend and part of the backend, specifically the progress tracking system and the trainer management section. Includes an intelligent chatbot for personalized assistance.'
+      angax: 'Fitness social network for comprehensive training tracking. It allows creating and sharing routines, visualizing progress, and connecting with an active community. I developed the complete frontend and part of the backend, specifically the progress tracking system and the trainer management section. Includes an intelligent chatbot for personalized assistance.',
+      lolhub: 'League of Legends social network to interact with the community, explore detailed champion information (skills, builds, lore), and create your ideal team. I developed the complete backend and part of the frontend, using a modern and efficient architecture with Docker.'
     }
   }
 
@@ -44,6 +46,14 @@ const Proyectos = () => {
       technologies: ['React.js', 'HTML', 'CSS', 'JavaScript', 'PHP', 'Docker', 'Laravel', 'Render'],
       github: 'https://github.com/Angelation/Angax',
       demo: 'https://angax-frontend.onrender.com/'
+    },
+    {
+      id: 4,
+      title: 'LoLHub',
+      description: projectDescriptions[language].lolhub,
+      technologies: ['React.js', 'TypeScript', 'Chakra UI', 'Vite', 'Laravel', 'PHP', 'Docker'],
+      github: 'https://github.com/Enrique002/LoLHub',
+      demo: null
     }
   ]
 
