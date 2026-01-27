@@ -113,6 +113,15 @@ class PortfolioController extends Controller
             ],
             [
                 'id' => 5,
+                'title' => 'NexusArcade',
+                'description' => 'Plataforma de juegos rápidos que incluye Sudoku, Tres en Raya, Solitario y Blackjack. Desarrollé la totalidad del proyecto, tanto el frontend con React como el backend con Laravel.',
+                'technologies' => ['React.js', 'Laravel', 'PHP', 'JavaScript', 'CSS', 'Vite', 'Vercel'],
+                'image' => '/images/nexusarcade.jpg',
+                'github' => 'https://github.com/Mateo9804/NexusArcade',
+                'demo' => 'https://nexusarcade-rmiscd864-mateo9804s-projects.vercel.app/'
+            ],
+            [
+                'id' => 6,
                 'title' => 'Portafolio Personal',
                 'description' => 'Portafolio web personal desarrollado con React y Laravel, mostrando proyectos y habilidades.',
                 'technologies' => ['React', 'Laravel', 'PHP', 'Bootstrap', 'CSS'],
