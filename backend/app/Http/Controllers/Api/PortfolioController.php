@@ -122,6 +122,15 @@ class PortfolioController extends Controller
             ],
             [
                 'id' => 6,
+                'title' => 'GastoClaro',
+                'description' => 'GastoClaro es una plataforma SaaS (Software as a Service) integral diseñada para optimizar y automatizar el control financiero de empresas, autónomos y equipos administrativos. La aplicación permite digitalizar tickets y facturas de forma rápida, eliminando el error humano y centralizando la información contable.',
+                'technologies' => ['Laravel', 'PHP', 'JavaScript', 'Blade', 'CSS', 'HTML'],
+                'image' => '/images/gastoclaro.jpg',
+                'github' => 'https://github.com/Mateo9804/gastoclaro',
+                'demo' => null
+            ],
+            [
+                'id' => 7,
                 'title' => 'Portafolio Personal',
                 'description' => 'Portafolio web personal desarrollado con React y Laravel, mostrando proyectos y habilidades.',
                 'technologies' => ['React', 'Laravel', 'PHP', 'Bootstrap', 'CSS'],

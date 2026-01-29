@@ -12,14 +12,16 @@ const Proyectos = () => {
       zetacuts: 'Plataforma digital completa para la gestión de una barbería que permite agendar citas, vender productos y administrar usuarios. Desarrollé el backend completo y parte del frontend, incluyendo funcionalidades avanzadas de gestión de citas, inventario de productos y sistema de usuarios.',
       angax: 'Red social fitness para el seguimiento integral del entrenamiento. Permite crear y compartir rutinas, visualizar progresos y conectar con una comunidad activa. Desarrollé el frontend completo y parte del backend, destacando el sistema de seguimiento de progreso y el apartado de gestión para entrenadores. Incluye un chatbot inteligente de asistencia personalizada.',
       lolhub: 'Red social de League of Legends para interactuar con la comunidad, explorar información detallada sobre campeones (habilidades, builds, lore) y crear tu equipo ideal. Desarrollé el backend completo y parte del frontend, utilizando una arquitectura moderna y eficiente con Docker.',
-      nexusarcade: 'Plataforma de juegos rápidos que incluye Sudoku, Tres en Raya, Solitario y Blackjack. Desarrollé la totalidad del proyecto, tanto el frontend interactivo con React como el backend con Laravel, enfocándome en la lógica de juego y una experiencia de usuario fluida.'
+      nexusarcade: 'Plataforma de juegos rápidos que incluye Sudoku, Tres en Raya, Solitario y Blackjack. Desarrollé la totalidad del proyecto, tanto el frontend interactivo con React como el backend con Laravel, enfocándome en la lógica de juego y una experiencia de usuario fluida.',
+      gastoclaro: 'GastoClaro es una plataforma SaaS (Software as a Service) integral diseñada para optimizar y automatizar el control financiero de empresas, autónomos y equipos administrativos. La aplicación permite digitalizar tickets y facturas de forma rápida, eliminando el error humano y centralizando la información contable.'
     },
     en: {
       jobbridge: 'Digital platform specialized in connecting developers and programmers with companies looking for tech talent. The project was born with the goal of offering a more precise and efficient professional space than generalist job portals, facilitating companies access to qualified profiles and allowing developers to showcase their skills clearly and distinctively.',
       zetacuts: 'Complete digital platform for barber shop management that allows scheduling appointments, selling products and managing users. I developed the complete backend and part of the frontend, including advanced appointment management features, product inventory and user system.',
       angax: 'Fitness social network for comprehensive training tracking. It allows creating and sharing routines, visualizing progress, and connecting with an active community. I developed the complete frontend and part of the backend, specifically the progress tracking system and the trainer management section. Includes an intelligent chatbot for personalized assistance.',
       lolhub: 'League of Legends social network to interact with the community, explore detailed champion information (skills, builds, lore), and create your ideal team. I developed the complete backend and part of the frontend, using a modern and efficient architecture with Docker.',
-      nexusarcade: 'Fast-paced gaming platform including Sudoku, Tic-tac-toe, Solitaire, and Blackjack. I developed the entire project, both the interactive frontend with React and the backend with Laravel, focusing on game logic and a smooth user experience.'
+      nexusarcade: 'Fast-paced gaming platform including Sudoku, Tic-tac-toe, Solitaire, and Blackjack. I developed the entire project, both the interactive frontend with React and the backend with Laravel, focusing on game logic and a smooth user experience.',
+      gastoclaro: 'GastoClaro is an integral SaaS (Software as a Service) platform designed to optimize and automate the financial control of companies, freelancers, and administrative teams. The application allows for quick digitization of tickets and invoices, eliminating human error and centralizing accounting information.'
     }
   }
 
@@ -64,6 +66,14 @@ const Proyectos = () => {
       technologies: ['React.js', 'Laravel', 'PHP', 'JavaScript', 'CSS', 'Vite', 'Vercel'],
       github: 'https://github.com/Mateo9804/NexusArcade',
       demo: 'https://nexusarcade-esp.vercel.app/'
+    },
+    {
+      id: 6,
+      title: 'GastoClaro',
+      description: projectDescriptions[language].gastoclaro,
+      technologies: ['Laravel', 'PHP', 'JavaScript', 'Blade', 'CSS', 'HTML'],
+      github: 'https://github.com/Mateo9804/gastoclaro',
+      demo: null
     }
   ]
 
