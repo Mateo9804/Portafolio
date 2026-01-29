@@ -118,7 +118,7 @@ class PortfolioController extends Controller
                 'technologies' => ['React.js', 'Laravel', 'PHP', 'JavaScript', 'CSS', 'Vite', 'Vercel'],
                 'image' => '/images/nexusarcade.jpg',
                 'github' => 'https://github.com/Mateo9804/NexusArcade',
-                'demo' => 'https://nexusarcade-rmiscd864-mateo9804s-projects.vercel.app/'
+                'demo' => 'https://nexusarcade-esp.vercel.app/'
             ],
             [
                 'id' => 6,
