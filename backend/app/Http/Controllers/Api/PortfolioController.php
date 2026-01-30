@@ -97,7 +97,7 @@ class PortfolioController extends Controller
                 'id' => 3,
                 'title' => 'Angax',
                 'description' => 'Red social fitness para el seguimiento del entrenamiento. Desarrollé el frontend y parte del backend (progreso y entrenadores). Incluye rutinas compartidas y chatbot inteligente.',
-                'technologies' => ['React.js', 'HTML', 'CSS', 'JavaScript', 'PHP', 'Docker', 'Laravel', 'Render'],
+                'technologies' => ['React.js', 'HTML', 'CSS', 'JavaScript', 'PHP', 'Docker', 'Laravel', 'PostgreSQL', 'Render'],
                 'image' => '/images/angax.jpg',
                 'github' => 'https://github.com/Angelation/Angax',
                 'demo' => 'https://angax-frontend.onrender.com/'
@@ -158,7 +158,10 @@ class PortfolioController extends Controller
             'backend' => [
                 ['name' => 'PHP', 'level' => 90],
                 ['name' => 'Laravel', 'level' => 85],
+                ['name' => 'Node.js', 'level' => 75],
+                ['name' => 'Express', 'level' => 75],
                 ['name' => 'Java', 'level' => 80],
+                ['name' => 'PostgreSQL', 'level' => 75],
                 ['name' => 'MySQL', 'level' => 80],
                 ['name' => 'RESTful API', 'level' => 85],
             ],

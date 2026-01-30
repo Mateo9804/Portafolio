@@ -47,7 +47,7 @@ const Proyectos = () => {
       id: 3,
       title: 'Angax',
       description: projectDescriptions[language].angax,
-      technologies: ['React.js', 'HTML', 'CSS', 'JavaScript', 'PHP', 'Docker', 'Laravel', 'Render'],
+      technologies: ['React.js', 'HTML', 'CSS', 'JavaScript', 'PHP', 'Docker', 'Laravel', 'PostgreSQL', 'Render'],
       github: 'https://github.com/Angelation/Angax',
       demo: 'https://angax-frontend.onrender.com/'
     },

@@ -33,7 +33,7 @@ const Projects = () => {
             id: 3,
             title: 'Angax',
             description: 'Red social fitness para el seguimiento del entrenamiento. Desarrollé el frontend y parte del backend (progreso y entrenadores). Incluye rutinas compartidas y chatbot inteligente.',
-            technologies: ['React.js', 'HTML', 'CSS', 'JavaScript', 'PHP', 'Docker', 'Laravel', 'Render'],
+            technologies: ['React.js', 'HTML', 'CSS', 'JavaScript', 'PHP', 'Docker', 'Laravel', 'PostgreSQL', 'Render'],
             github: 'https://github.com/Angelation/Angax',
             demo: 'https://angax-frontend.onrender.com/'
           }

@@ -18,6 +18,9 @@ const Habilidades = () => {
       'Java',
       'PHP',
       'Laravel',
+      'Node.js',
+      'Express',
+      'PostgreSQL',
       'MySQL'
     ],
     otros: [
